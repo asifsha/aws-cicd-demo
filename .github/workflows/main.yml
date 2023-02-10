@@ -37,3 +37,19 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: lambda-demo
           source: lambda-demo/lambda_function.py
+          
+          
+  deploy_github-lambda:
+    name: deploy github lambda from source
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source code
+        uses: actions/checkout@v1
+      - name: demo deploy
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: lambda-github
+          source: lambda_github.py
