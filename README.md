@@ -1,2 +1,2 @@
 # lambda-cd
-## Deploy multiple lambda function to AWS using github actions
+## Deploy multiple lambda functions to AWS using github actions
