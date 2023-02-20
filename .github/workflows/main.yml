@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: checkout source code
         uses: actions/checkout@v1
-      - name: demo deploy
+      - name: test deploy
         uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
